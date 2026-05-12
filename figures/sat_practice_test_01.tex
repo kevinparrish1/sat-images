@@ -1,0 +1,3844 @@
+\documentclass[11pt, twocolumn]{article}
+\usepackage[letterpaper, margin=0.75in, top=0.85in, bottom=0.6in, headheight=30pt, headsep=10pt, footskip=20pt]{geometry}
+
+% Font: Minion Pro via fontspec (compile with XeLaTeX)
+% Upload MinionPro .otf files to a fonts/ folder in your Overleaf project
+\usepackage{fontspec}
+\setmainfont{MinionPro-Regular}[
+  Path = fonts/,
+  Extension = .otf,
+  BoldFont = MinionPro-Bold,
+  ItalicFont = MinionPro-It,
+  BoldItalicFont = MinionPro-BoldIt,
+]
+
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{needspace}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+\usepackage{environ}
+\usepackage{changepage}
+\usepackage[normalem]{ulem}  % line-breaking underlines
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Layout
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\columnsep}{0.4in}
+
+% Left-align everything (no justification)
+\raggedright
+
+% Colors
+\definecolor{satgray}{gray}{0.4}
+\definecolor{qbarcolor}{gray}{0.85}
+\definecolor{headergray}{gray}{0.88}
+\definecolor{footergray}{gray}{0.5}
+
+% List spacing
+\setlist{topsep=3pt, itemsep=2pt, parsep=0pt}
+
+% Current module name storage (for header)
+\newcommand{\currentmodulename}{}
+\newcommand{\setmodulename}[1]{\renewcommand{\currentmodulename}{#1}}
+
+% ── Page style for question pages ──
+\fancypagestyle{questionpage}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+  \fancyhead[C]{%
+    \begin{tikzpicture}[remember picture, overlay]
+      % Gray header box with module name
+      \fill[headergray]
+        ([yshift=2pt]current page.north west) rectangle
+        ([yshift=-28pt]current page.north east);
+      \node[anchor=center, font=\large\bfseries, text=black]
+        at ([yshift=-13pt]current page.north) {\currentmodulename};
+      % Black dotted center line from below header to above footer
+      \draw[dotted, black, line width=0.8pt]
+        ([yshift=-32pt]current page.north) -- ([yshift=22pt]current page.south);
+    \end{tikzpicture}%
+  }%
+  \fancyfoot[C]{\textcolor{footergray}{\thepage}}%
+}
+
+% ── Page style for non-question pages ──
+\fancypagestyle{plainpage}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
+
+\pagestyle{questionpage}
+\newcounter{questionnum}
+
+\begin{document}
+
+\onecolumn
+\newpage
+\thispagestyle{plainpage}
+\begin{center}
+\vspace*{1.5in}
+{\Huge\textbf{The SAT\textsuperscript{\textregistered}}}\\[24pt]
+{\Large Practice Test \#1}\\[24pt]
+{\large Reading and Writing / Math}\\[12pt]
+{\normalsize Make time to take the practice test.}\\
+{\normalsize It is one of the best ways to get ready for the SAT.}
+\end{center}
+
+\onecolumn
+\newpage
+\thispagestyle{plainpage}
+\begin{center}
+\vspace*{3in}
+{\large Test begins on the next page.}
+\end{center}
+
+\setmodulename{Medium}
+\onecolumn
+\newpage
+\thispagestyle{plainpage}
+\setcounter{questionnum}{0}
+\begin{center}
+{\Large\textbf{Reading and Writing}}\\[6pt]
+{\large 27 QUESTIONS}\\[4pt]
+{\large\textbf{Module}}\\
+{\Large\textbf{1}}
+\end{center}
+\vspace{8pt}
+\textbf{DIRECTIONS}
+
+The questions in this section address a number of important reading and writing skills. Each question includes one or more passages, which may include a table or graph. Read each passage and question carefully, and then choose the best answer to the question based on the passage(s).
+
+All questions in this section are multiple-choice with four answer choices. Each question has a single best answer.
+\vspace{8pt}
+\hrule
+\vspace{8pt}
+\twocolumn
+\pagestyle{questionpage}
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Studying how workload affects productivity, Maryam Kouchaki and colleagues found that people who chose to do relatively easy tasks first were less \,\rule{2cm}{0.4pt}\, compared to those who did hard tasks first. Finishing easy tasks gave participants a sense of accomplishment, but those who tackled hard tasks first actually became more skilled and productive workers over time.
+\vspace{6pt}
+
+Which choice completes the text with the most logical and precise word or phrase?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item secretive
+  \item efficient
+  \item outgoing
+  \item unsympathetic
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+In \textit{Nature Poem} (2017), Kumeyaay poet Tommy Pico portrays his \,\rule{2cm}{0.4pt}\, the natural world by honoring the centrality of nature within his tribe's traditional beliefs while simultaneously expressing his distaste for being in wilderness settings himself.
+\vspace{6pt}
+
+Which choice completes the text with the most logical and precise word or phrase?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item responsiveness to
+  \item ambivalence toward
+  \item renunciation of
+  \item mastery over
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+In a 2019 study, Jeremy Gunawardena and colleagues found that the single-celled protozoan \textit{Stentor roeseli} not only uses strategies to escape irritating stimuli but also switches strategies when one fails. This evidence of protozoans sophisticatedly ``changing their minds'' demonstrates that single-celled organisms may not be limited to \,\rule{2cm}{0.4pt}\, behaviors.
+\vspace{6pt}
+
+Which choice completes the text with the most logical and precise word or phrase?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item aggressive
+  \item rudimentary
+  \item evolving
+  \item advantageous
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The following text is from Louise Erdrich's 1986 novel \textit{The Beet Queen}. The narrator discusses her relationship with her young niece, Dot. Celestine, the narrator's sister-in-law, is Dot's mother.
+
+\vspace{6pt}
+\begin{quote}
+
+Dot was as impatient with babyhood as I. She tried at once to grow out of it. Celestine never saw that, because she, and only she, took pleasure in Dot's helpless softness. Only Celestine was saddened by her daughter's fierce progress. Day by day, Dot grew stronger. \uline{In her shopping-cart stroller she exercised to exhaustion, bouncing for hours to develop her leg muscles.}
+
+\end{quote}
+
+\textcopyright{}1986 by Louise Erdrich
+\vspace{6pt}
+
+Which choice best describes the function of the underlined sentence in the text as a whole?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item It offers a detail that shows how Dot is growing stronger.
+  \item It expresses hope that Celestine will mature psychologically.
+  \item It explores some of the narrator's psychological characteristics.
+  \item It indicates how sad Celestine is by describing a behavior she engages in.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Very little is known about the role nocturnal insects, such as moths, play in flower pollination because it is difficult to monitor insects at night. \uline{To address this problem, a team of scientists used time-lapse cameras to record pollinator visits to red clover all day and night.} The recordings showed that while most pollinator visits were by bumblebees, one-third of visits were by moths. Additionally, flowers that were visited by both moths and bees produced more seeds than flowers that were only visited by bees.
+\vspace{6pt}
+
+Which choice best states the function of the underlined sentence?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item To describe an approach a team of scientists used to study pollinators
+  \item To question a claim scientists make about pollinators
+  \item To explain why moths prefer red clover to other flowers
+  \item To announce an unexpected research finding about red clover
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+\textbf{Text 1}
+
+A team led by Bernardo Strassburg has found that rewilding farmland (returning the land to its natural state) could help preserve biodiversity and offset carbon emissions. The amount of farmland that would need to be restored, they found, is remarkably low. Rewilding a mere 15\% of the world's current farmland would prevent 60\% of expected species extinctions and help absorb nearly 299 gigatons of carbon dioxide---a clear win in the fight against the biodiversity and climate crises.
+
+ 
+
+\vspace{8pt}
+\textbf{Text 2}
+
+While Strassburg's team's findings certainly offer encouraging insight into the potential benefits of rewilding, it's important to consider potential effects on global food supplies. The researchers suggest that to compensate for the loss of food-producing land, remaining farmland would need to produce even more food. Thus, policies focused on rewilding farmland must also address strategies for higher-yield farming.
+\vspace{6pt}
+
+Which choice best describes a difference in how the author of Text 1 and the author of Text 2 view Strassburg's team's study?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item The author of Text 2 approaches the study's findings with some caution, whereas the author of Text 1 is optimistic about the reported potential environmental benefits.
+  \item The author of Text 2 claims that the percentage of farmland identified by Strassburg's team is too low for rewilding to achieve meaningful results, whereas the author of Text 1 thinks the percentage is sufficient.
+  \item The author of Text 2 believes that the results described by Strassburg's team are achievable in the near future, whereas the author of Text 1 argues that they likely aren't.
+  \item The author of Text 2 focuses on rewilding's effect on carbon emissions, whereas the author of Text 1 focuses on its effect on biodiversity.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+\textbf{Text 1}
+
+One challenge faced by researchers studying global urbanization is that countries may define urban settlements differently. Many countries define urban settlements based on the number of people living in them. However, countries do not all use the same number; for example, Iceland uses a minimum population of 200, while the Netherlands uses 20,000. Other countries use a combination of population and other factors. This variation makes it difficult for researchers to compare aspects of urbanization in different countries.
+
+ 
+
+\vspace{8pt}
+\textbf{Text 2}
+
+Recently, a group of six international organizations developed global definitions of common types of settlements. The group developed a new measure called the ``degree of urbanization.'' This new measure establishes global criteria used to define three types of settlements (cities, towns, and rural areas) and allows researchers to better understand global urbanization rates.
+\vspace{6pt}
+
+Based on the texts, how would the author of Text 2 most likely respond to the problem presented in Text 1?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item By recommending that a specific institution should further investigate the problem
+  \item By suggesting that researchers focus on topics besides urbanization
+  \item By supplying additional ways in which urbanization research is difficult
+  \item By noting that a possible solution to the problem is available
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Businesses selling clothing and other fashion items face obstacles in trying to forecast how much product to order: tastes and styles change quickly, while manufacturing clothing takes a significant amount of time. Researchers Youran Fu and Marshall Fisher have found that combining sellers' own data with information gathered from social media can dramatically improve the accuracy of such forecasts---by 24 to 57 percent in the cases they directly studied. Better predictions mean demand is easier to meet without retailers becoming overstocked.
+\vspace{6pt}
+
+Which choice best states the main idea of the text?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Using multiple data sources can enhance the ability of sellers in the fashion industry to anticipate demand.
+  \item Social media is revolutionizing how both sellers and researchers view the fashion industry.
+  \item Becoming overstocked is the main preoccupation of sellers trying to forecast demand for fashion items.
+  \item Retailers can use their own data to accurately predict how tastes and styles are evolving.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The following text is adapted from Countee Cullen's 1926 poem ``Thoughts in a Zoo.'' 
+
+\vspace{6pt}
+\begin{quote}
+
+They in their cruel traps, and we in ours,  
+
+Survey each other's rage, and pass the hours  
+
+Commiserating each the other's woe,  
+
+To mitigate his own pain's fiery glow.  
+
+Man could but little proffer in exchange  
+
+Save that his cages have a larger range.  
+
+That lion with his lordly, untamed heart  
+
+Has in some man his human counterpart,
+
+Some lofty soul in dreams and visions wrapped,  
+
+But in the stifling flesh securely trapped.
+
+\end{quote}
+\vspace{6pt}
+
+Based on the text, what challenge do humans sometimes experience?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item They cannot effectively tame certain wild animals because of a lack of compassion.
+  \item They cannot focus on setting attainable goals because of a lack of motivation.
+  \item They quickly become frustrated when faced with difficult tasks because of a lack of self-control.
+  \item They have aspirations that cannot be fulfilled because of certain limitations.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Although it's clear that Mars once had liquid water on its surface, astronomers have debated whether the evidence of ancient water reflects a prolonged phase of warm, wet conditions---the so-called wet and warm scenario---or a brief period of melting in an otherwise consistently frozen environment. Researchers Benjamin T. Cardenas and Michael P. Lamb recently added to this debate by using data from NASA and the Mars Orbiter Laser Altimeter to map the topography of what is now a large basin in Mars's northern hemisphere. Cardenas and Lamb concluded that the wet and warm scenario is likely correct.
+\vspace{6pt}
+
+Which finding about the basin, if true, would most directly support Cardenas and Lamb's conclusion?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Its dimensions and shape indicate that it is unlikely to have formed as the result of an asteroid or comet impact.
+  \item It has features suggesting that it once held an ocean that underwent gradual sea-level changes over an extended time.
+  \item Its physical characteristics are most consistent with it having formed as a result of a massive but short-lived influx of liquid water.
+  \item It is surrounded by channels that could have been formed either by running water or by flowing lava.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Many trees produce growth rings as they age, with each ring in a tree's trunk representing one year in the tree's life. This often makes it fairly easy to determine how old a tree was when it was cut down. To do so, you look at the tree stump and count the dark rings you see. But a researcher claims that this method often can't be used to identify the age of olive trees.
+\vspace{6pt}
+
+Which detail, if true, would most directly support the researcher's claim?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item The oldest olive tree in the world is likely over 1,100 years old.
+  \item Narrow growth rings can suggest that an olive tree experienced harsh conditions.
+  \item Many olive trees have growth rings that are difficult to see.
+  \item Olive trees thrive in areas with hot, dry summers.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+\begin{center}
+\textbf{Effects of Mycorrhizal Fungi on 3 Plant Species}
+\end{center}
+\noindent\resizebox{\linewidth}{!}{
+\begin{tabular}{|l|l|l|l|}
+\hline
+Plant species & Mycorrhizal host & Average mass of plants grown in soil containing mycorrhizal fungi (in grams) & Average mass of plants grown in soil treated to kill fungi (in grams) \\
+\hline
+Corn & yes & 15.1 & 3.8 \\
+\hline
+Marigold & yes & 10.2 & 2.4 \\
+\hline
+Broccoli & no & 7.5 & 7 \\
+\hline
+\end{tabular}
+}
+
+Mycorrhizal fungi in soil benefits many plants, substantially increasing the mass of some. A student conducted an experiment to illustrate this effect. The student chose three plant species for the experiment, including two that are mycorrhizal hosts (species known to benefit from mycorrhizal fungi) and one nonmycorrhizal species (a species that doesn't benefit from and may even be harmed by mycorrhizal fungi). The student then grew several plants from each species both in soil containing mycorrhizal fungi and in soil that had been treated to kill mycorrhizal and other fungi. After several weeks, the student measured the plants' average mass and was surprised to discover that \,\rule{2cm}{0.4pt}\,
+\vspace{6pt}
+
+Which choice most effectively uses data from the table to complete the statement?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item broccoli grown in soil containing mycorrhizal fungi had a slightly higher average mass than broccoli grown in soil that had been treated to kill fungi.
+  \item corn grown in soil containing mycorrhizal fungi had a higher average mass than broccoli grown in soil containing mycorrhizal fungi.
+  \item marigolds grown in soil containing mycorrhizal fungi had a much higher average mass than marigolds grown in soil that had been treated to kill fungi.
+  \item corn had the highest average mass of all three species grown in soil that had been treated to kill fungi, while marigolds had the lowest.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+``Lines Written in Early Spring'' is a 1798 poem by William Wordsworth. In the poem, the speaker describes having contradictory feelings while experiencing the sights and sounds of a spring day: \,\rule{2cm}{0.4pt}\,
+\vspace{6pt}
+
+Which quotation from ``Lines Written in Early Spring'' most effectively illustrates the claim?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item ``Through primrose-tufts, in that sweet bower, / The periwinkle trail'd its wreathes; / And 'tis my faith that every flower / Enjoys the air it breathes.''
+  \item ``The budding twigs spread out their fan, / To catch the breezy air; / And I must think, do all I can, / That there was pleasure there.''
+  \item ``The birds around me hopp'd and play'd: / Their thoughts I cannot measure, / But the least motion which they made, / It seem'd a thrill of pleasure.''
+  \item ``I heard a thousand blended notes, / While in a grove I [sat] reclined, / In that sweet mood when pleasant thoughts / Bring sad thoughts to the mind.''
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Flint artifacts dating to 800,000 to 1,000,000 years ago have been recovered from the Evron Quarry in Israel. Likely created by the hominin \textit{Homo erectus}, the artifacts have no visual features suggesting that they were exposed to fire, leading some scholars to conclude that these hominins had not acquired control of fire. But Zane Stepka and colleagues recently used a new method to determine whether these artifacts had been exposed to temperatures above 400°C (the typical temperature campfires reach) and concluded that the hominins who inhabited the site may have had control of fire.
+\vspace{6pt}
+
+Which choice best describes data in the graph that support the team's conclusion?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Artifacts K5\_106 and K3\_9 were exposed to temperatures above 400°C.
+  \item Artifacts L5\_239 and K3\_18 were exposed to temperatures of approximately 550°C and 650°C, respectively.
+  \item All of the artifacts were exposed to temperatures above 100°C.
+  \item Artifact K3\_9 was exposed to a higher temperature than was artifact K5\_106.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The Cretaceous pterosaur \textit{Tupandactylus navigans }is known for having an anomalously oversized head crest. Until an almost complete fossil skeleton was found in Brazil, paleontologists had been able to study only skull specimens from \textit{T. navigans}, though it was presumed that, like other pterosaurs, the species's primary form of locomotion was powered flight. Examining the fuller skeleton in 2016, Victor Beccari and his team determined that \textit{T. navigans }had long hind legs, short wings, and an unusually long neck---characteristics that, combined with the creature's large-crested head, would have made sustained flight difficult and walking upright relatively comfortable. Based on these findings the team suggests that \textit{T. navigans }likely \,\rule{2cm}{0.4pt}\,
+\vspace{6pt}
+
+Which choice most logically completes the text?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item flew for longer distances than did other pterosaur species that had oversized head crests.
+  \item had longer wings than other pterosaur species considered to have been comfortable walking.
+  \item had a smaller head than researchers expected based on the earlier \textit{T. navigans} skull specimens.
+  \item flew for shorter distances and spent more time walking than researchers previously thought.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Many animals, including humans, must sleep, and sleep is known to have a role in everything from healing injuries to encoding information in long-term memory. But some scientists claim that, from an evolutionary standpoint, deep sleep for hours at a time leaves an animal so vulnerable that the known benefits of sleeping seem insufficient to explain why it became so widespread in the animal kingdom. These scientists therefore imply that \,\rule{2cm}{0.4pt}\,
+\vspace{6pt}
+
+Which choice most logically completes the text?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item prolonged deep sleep is likely advantageous in ways that have yet to be discovered.
+  \item most traits perform functions that are hard to understand from an evolutionary standpoint.
+  \item it is more important to understand how widespread prolonged deep sleep is than to understand its function.
+  \item many traits that provide significant benefits for an animal also likely pose risks to that animal.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The US Geological Survey wants to map every human-made structure in the United States, and it is asking volunteers to help. Cassie Tammy Wang and Ashish D'Souza are just two of the many volunteer map editors who \,\rule{2cm}{0.4pt}\, to the project since it began in 2012.
+\vspace{6pt}
+
+Which choice completes the text so that it conforms to the conventions of Standard English?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item contribute
+  \item will contribute
+  \item have contributed
+  \item will be contributing
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+In Death Valley National Park's Racetrack Playa, a flat, dry lakebed, are 162 rocks---some weighing less than a pound but others almost 700 pounds---that move periodically from place to place, seemingly of their own volition. Racetrack-like trails in the \,\rule{2cm}{0.4pt}\, mysterious migration.
+\vspace{6pt}
+
+Which choice completes the text so that it conforms to the conventions of Standard English?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item playas sediment mark the rock's
+  \item playa's sediment mark the rocks
+  \item playa's sediment mark the rocks'
+  \item playas' sediment mark the rocks'
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+In January 1776, Thomas Paine published \textit{Common Sense}, an appeal for freedom from the British monarchy that famously helped ignite the desire for independence among the American colonists. After the colonies achieved their independence, Paine moved to Paris, where the provocative \,\rule{2cm}{0.4pt}\, would contribute to another revolution---the French Revolution.
+\vspace{6pt}
+
+Which choice completes the text so that it conforms to the conventions of Standard English?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item authors political writings
+  \item author's political writings
+  \item author's political writing's
+  \item authors' political writings'
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The pedagogy of the Suzuki method is rooted in several central \,\rule{2cm}{0.4pt}\, by Japanese violinist Shinichi Suzuki, who sought to parallel the linguistic learning environment, the method emphasizes playing instruments from a very young age and teaches students as young as three to play simple classical pieces such as ``March in G.''
+\vspace{6pt}
+
+Which choice completes the text so that it conforms to the conventions of Standard English?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item tenets. Developed
+  \item tenets developed
+  \item tenets that, developed
+  \item tenets, developed
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Long attributed to Jacques-Louis David, the preeminent Neoclassical painter of his day, the 1801 painting \textit{Marie Joséphine Charlotte du Val d'Ognes} gained fresh attention in the 1990s when art historians discovered that the painting---which depicts a solitary young woman sketching---was actually the work of little-known French portrait \,\rule{2cm}{0.4pt}\, Marie-Denise Villers (1774--1821).
+\vspace{6pt}
+
+Which choice completes the text so that it conforms to the conventions of Standard English?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item artist---
+  \item artist
+  \item artist:
+  \item artist,
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The Globe Theatre in London is a reconstruction of the famed venue where many of Shakespeare's plays were first performed. In 1613, a prop cannon \,\rule{2cm}{0.4pt}\, during a performance and ignited the Globe's thatched roof. No one was hurt, but in two hours the original Globe was gone.
+\vspace{6pt}
+
+Which choice completes the text so that it conforms to the conventions of Standard English?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item malfunctions
+  \item will malfunction
+  \item has malfunctioned
+  \item malfunctioned
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Alexander Lawrence Posey (1873--1908) varied his focus and tone depending on the genre in which he was writing. In his poetry, he used heartfelt language to evoke the beauty and peacefulness of his natural surroundings; in his journalism, \,\rule{2cm}{0.4pt}\, he employed humor and satire to comment on political issues affecting his Muskogee Creek community.
+\vspace{6pt}
+
+Which choice completes the text with the most logical transition?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item that is,
+  \item granted,
+  \item similarly,
+  \item by contrast,
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+In 1974, Mexican chemist Mario Molina and US chemist F. Sherwood Rowland discovered that chemicals called CFCs were harmful to the ozone layer. Their research was extremely influential in the fight against CFCs. \,\rule{2cm}{0.4pt}\, it laid the foundation for a 1987 treaty that phased out the use of CFCs across the globe.
+\vspace{6pt}
+
+Which choice completes the text with the most logical transition?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Regardless,
+  \item Specifically,
+  \item However,
+  \item Earlier,
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+While researching a topic, a student has taken the following notes:
+
+\begin{itemize}
+
+\item Generally, an object will heat up when twisted.
+
+\item The twisting of an object is known as torsion.
+
+\item A 2019 study led by Zunfeng Liu and Ray Baughman tested the torsional heating of various fibers.
+
+\item When a 3-millimeter-thick sample of thermoplastic polyurethane (TPU) fiber was twisted, its average surface temperature increased by 6°C.
+
+\item When a 4-millimeter-thick sample of styrene-ethylene-butylene-styrene (SEBS) rubber fiber was twisted, its average surface temperature increased by 3.5°C.
+
+\end{itemize}
+\vspace{6pt}
+
+The student wants to contrast the two samples. Which choice most effectively uses relevant information from the notes to accomplish this goal?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item When the fibers were twisted as part of the 2019 study, the surface temperature of both samples increased.
+  \item In 2019, researchers studied the effect of torsional heating on various fibers, including samples of SEBS rubber and TPU.
+  \item Twisting an object will generally cause its temperature to increase, a process known as torsional heating.
+  \item The SEBS rubber sample used in the 2019 study was thicker than the TPU sample.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+While researching a topic, a student has taken the following notes:
+
+\begin{itemize}
+
+\item Crown shyness is a phenomenon in which the tops (crowns) of neighboring trees grow close together but don't overlap.
+
+\item To explain how this happens, Australian forester M.R. Jacobs proposes the mutual abrasion theory.
+
+\item According to Jacobs's theory, when trees brush against one another, branches break off.
+
+\item Malaysian scholar Francis S.P. Ng posits the mutual shade avoidance theory.
+
+\item According to Ng's theory, when tree branches detect shade from nearby trees' branches, they stop growing.
+
+\end{itemize}
+\vspace{6pt}
+
+The student wants to compare the causes of crown shyness proposed in the two theories. Which choice most effectively uses relevant information from the notes to accomplish this goal?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item While Jacobs proposes that crown shyness is caused by neighboring tree branches brushing against one another, Ng posits that it occurs when branches detect shade from nearby trees' branches.
+  \item Both Jacobs and Ng have proposed theories to explain what causes crown shyness.
+  \item Ng posits the mutual shade avoidance theory, whereas Jacobs proposes an alternative theory.
+  \item Jacobs's mutual abrasion theory proposes that when neighboring trees brush against one another, branches break off, resulting in a phenomenon in which the tops of trees grow close together but don't overlap.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+While researching a topic, a student has taken the following notes:
+
+\begin{itemize}
+
+\item John Carver was one of the 41 signatories of the Mayflower Compact.
+
+\item The Mayflower Compact was a legal agreement among the pilgrims that immigrated to Plymouth Colony.
+
+\item It was created in 1620 to establish a common government.
+
+\item It states that the pilgrims who signed it wanted to ``plant the first colony in the northern parts of Virginia'' under King James.
+
+\item Carver became the first governor of Plymouth Colony.
+
+\end{itemize}
+\vspace{6pt}
+
+The student wants to specify the reason the Mayflower Compact was created. Which choice most effectively uses relevant information from the notes to accomplish this goal?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Stating that its signatories wanted to ``plant the first colony in the northern parts of Virginia,'' the Mayflower Compact was a legal agreement among the pilgrims that immigrated to Plymouth Colony.
+  \item Created in 1620, the Mayflower Compact states that the pilgrims wanted to ``plant the first colony in the northern parts of Virginia.''
+  \item The Mayflower Compact was created to establish a common government among the pilgrims that immigrated to Plymouth Colony.
+  \item The Mayflower Compact had 41 signatories, including John Carver, the first governor of Plymouth Colony.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+\onecolumn
+\thispagestyle{plainpage}
+\vfill
+\begin{center}
+\rule{0.8\textwidth}{0.5pt}\\[6pt]
+{\large\textbf{STOP}}\\[4pt]
+{\small If you finish before time is called, you may check your work on this module only.\\
+Do not turn to any other module in the test.}
+\end{center}
+\onecolumn
+\newpage
+\thispagestyle{plainpage}
+\begin{center}
+\vspace*{3in}
+{\large No Test Material On This Page}
+\end{center}
+
+\setmodulename{Easy}
+\onecolumn
+\newpage
+\thispagestyle{plainpage}
+\setcounter{questionnum}{0}
+\begin{center}
+{\Large\textbf{Reading and Writing}}\\[6pt]
+{\large 27 QUESTIONS}\\[4pt]
+{\large\textbf{Module}}\\
+{\Large\textbf{2}}
+\end{center}
+\vspace{8pt}
+\textbf{DIRECTIONS}
+
+The questions in this section address a number of important reading and writing skills. Each question includes one or more passages, which may include a table or graph. Read each passage and question carefully, and then choose the best answer to the question based on the passage(s).
+
+All questions in this section are multiple-choice with four answer choices. Each question has a single best answer.
+\vspace{8pt}
+\hrule
+\vspace{8pt}
+\twocolumn
+\pagestyle{questionpage}
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Latro, the main character of Gene Wolfe's novel \textit{Soldier of the Mist}, is a man in ancient Greece. He completely loses his memory whenever he sleeps. So, before sleeping, Latro records the important experiences of each day on a scroll, carefully choosing which ones to \,\rule{2cm}{0.4pt}\,.
+\vspace{6pt}
+
+Which choice completes the text with the most logical and precise word or phrase?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item suspect
+  \item preserve
+  \item suggest
+  \item imagine
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Researcher Lucy Salazar is using radiocarbon dating to study Machu Picchu, an ancient Incan fortress in the Andes Mountains. She and her colleagues have found that the site's age differs from the \,\rule{2cm}{0.4pt}\, estimate: it is approximately 20 years older than scholars thought when first encountering Machu Picchu in 1911.
+\vspace{6pt}
+
+Which choice completes the text with the most logical and precise word or phrase?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item genuine
+  \item intentional
+  \item independent
+  \item original
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The following text is adapted from Ida B. Wells's 1970 autobiography \textit{A Crusade for Justice.} Mr. Watts is a reference to George Frederic Watts, an English painter.
+
+\vspace{6pt}
+\begin{quote}
+
+[Manchester's] art galleries are so \uline{arranged} that the name of every picture is plainly seen and one has no need of a catalogue to pick out the name and the artist. This is a convenience to the general public, which other art galleries, which shall be nameless, might copy to advantage. To her treasure of art Manchester has added Mr. Watts' latest picture, the Good Samaritan.
+
+\end{quote}
+
+\textcopyright{}1970 by the University of Chicago Press
+\vspace{6pt}
+
+As used in the text, what does the word ``arranged'' most nearly mean?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Organized
+  \item Ranked
+  \item Scheduled
+  \item Discussed
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The following text is adapted from Lewis Carroll's 1865 novel \textit{Alice's Adventures in Wonderland}.
+
+\vspace{6pt}
+\begin{quote}
+
+``The second thing is to find my way into that lovely garden. I think that will be the best plan.'' It sounded like an excellent plan, no doubt, and very neatly and \uline{simply} arranged; the only difficulty was, that Alice had not the smallest idea how to set about it.
+
+\end{quote}
+\vspace{6pt}
+
+As used in the text, what does the word ``simply'' most nearly mean?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Faintly
+  \item Hastily
+  \item Easily
+  \item Foolishly
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Ordinary soap bubbles usually exist for a minute or less before popping due to either a rupture forced by gravity-induced drainage or the evaporation of the liquid from which the bubble is composed. But physicist Aymeric Roux and colleagues discovered ways to mitigate these factors, resulting in bubbles that can last for a year or more. For example, glycerol tends to adhere to water molecules, so \uline{a bubble with a shell that contains both water and glycerol is able to draw additional water molecules from the surrounding air and thereby compensate for evaporation.}
+\vspace{6pt}
+
+Which choice best states the purpose of the underlined portion in the text as a whole?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item It describes the effects of a process devised by researchers that increases the longevity of an object discussed in the text.
+  \item It details the circumstances that prompted the research discussed in the text.
+  \item It presents a reason why the phenomenon discussed in the text that the researchers wanted to avoid will inevitably occur.
+  \item It mentions a method discussed in the text that researchers intend to test in future experiments.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The 1967 release of Harold Cruse's book \textit{The Crisis of the Negro Intellectual }isolated him from almost all other scholars and activists of the American Civil Rights Movement---though many of those thinkers disagreed with each other, he nonetheless found ways to disagree with them all. He thought that activists who believed that Black people such as himself should culturally assimilate were naïve. \uline{But he also sharply criticized Black nationalists such as Marcus Garvey who wanted to establish independent, self-contained Black economies and societies, even though Cruse himself identified as a Black nationalist.}
+\vspace{6pt}
+
+Which choice best describes the function of the underlined sentence in the text as a whole?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item It describes a direction that Cruse felt the Civil Rights Movement ought to take.
+  \item It indicates that Cruse's reputation as a persistent antagonist of other scholars is undeserved.
+  \item It describes a controversy that Cruse's work caused within the Black nationalist movement.
+  \item It helps explain Cruse's position with respect to the community of civil rights thinkers.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+\textbf{Text 1}
+
+In a study of insect behavior, Samadi Galpayage and colleagues presented bumblebees with small wooden balls and observed many of the bees clinging to, rolling, and dragging the objects. The researchers provided no external rewards (such as food) to encourage these interactions. \uline{The bees simply appeared to be playing---and for no other reason than because they were having fun}.
+
+\vspace{8pt}
+\textbf{Text 2}
+
+Insects do not have cortexes or other brain areas associated with emotions in humans. Still, Galpayage and her team have shown that bumblebees may engage in play, possibly experiencing some kind of positive emotional state. Other studies have suggested that bees experience negative emotional states (for example, stress), but as Galpayage and her team have acknowledged, emotions in insects, if they do indeed exist, are likely very rudimentary.
+\vspace{6pt}
+
+Based on the texts, how would the author of Text 2 most likely respond to the underlined portion of Text 1?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item By objecting that the bees were actually experiencing a negative feeling akin to stress rather than a positive feeling
+  \item By arguing that some insects other than bumblebees may be capable of experiencing complex emotional states
+  \item By pointing out that even humans sometimes struggle to have fun while engaging in play
+  \item By noting that if the bees were truly playing, any positive feelings they may have experienced were probably quite basic
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Modern dog breeds are largely the result of 160 years of owners crossbreeding certain dogs in order to select for particular physical appearances. Owners often say that some breeds are also more likely than others to have particular personality traits---basset hounds are affectionate; boxers are easy to train---but Kathleen Morrill and colleagues found through a combination of owner surveys and DNA sequencing of 2,000 dogs that while physical traits are predictably heritable among purebred dogs, behavior varies widely among dogs of the same breed.
+\vspace{6pt}
+
+Which choice best states the main idea of the text?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Dog breeds would not exist without many years of human intervention in dogs' reproduction.
+  \item Research fails to confirm a commonly held belief about dog breeds and behavior.
+  \item The dog breeds most popular among owners have often changed over the past 160 years.
+  \item A study of dog breeds is notable for its usage of both opinion surveys and DNA sequencing.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Shimmering is a collective defense behavior that researchers have observed in giant honeybee colonies. When shimmering, different groups of bees flip their bodies up and down in what looks like waves. This defense is initiated when hornets hover near a colony, serving to deter the hornets from approaching the bees. Researchers hypothesize that this behavior is a specialized defense response to hornets, as it is not observed when other, larger predators approach the colony.
+\vspace{6pt}
+
+Which choice best states the main idea of the text?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Researchers are unsure how giant honeybees defend against predators larger than hornets.
+  \item Researchers think that shimmering in giant honeybees is a specific defense against hornets.
+  \item Hornets are known to be the main predator of giant honeybees.
+  \item Several different species of insects use shimmering to defend against hornets.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+To understand how Paleolithic artists navigated dark caves, archaeologist Mª Ángeles Medina-Alcaide and her team tested different lighting methods in a cave in Spain using replicas of artifacts found in European caves with art. They used three different Paleolithic light sources---torches, animal-fat lamps, and fireplaces---determining that each likely had a specific purpose. For instance, the team learned that the animal-fat lamps were less useful than torches while walking because the lamps didn't illuminate the cave floor.
+\vspace{6pt}
+
+Which choice best states the main idea of the text?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Medina-Alcaide and her team's study demonstrated that fireplaces were essential to the creators of Paleolithic cave art.
+  \item Medina-Alcaide and her team discovered that Paleolithic cave artists in Spain used animal-fat lamps more often than they used torches.
+  \item Medina-Alcaide and her team were reluctant to draw many conclusions from their study because of the difficulty they had replicating light sources based on known artifacts.
+  \item Medina-Alcaide and her team tested Paleolithic light sources and learned some details about how Paleolithic artists traveled within dark caves.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Many archaeologists will tell you that categorizing excavated fragments of pottery by style, period, and what objects they belong to relies not only on standard criteria, but also on instinct developed over years of practice. In a recent study, however, researchers trained a deep-learning computer model on thousands of images of pottery fragments and found that it could categorize them as accurately as a team of expert archaeologists. Some archaeologists have expressed concern that they might be replaced by such computer models, but the researchers claim that outcome is highly unlikely.
+\vspace{6pt}
+
+Which finding, if true, would most directly support the researchers' claim?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item In the researchers' study, the model was able to categorize the pottery fragments much more quickly than the archaeologists could.
+  \item In the researchers' study, neither the model nor the archeologists were able to accurately categorize all the pottery fragments that were presented.
+  \item A survey of archaeologists showed that categorizing pottery fragments limits the amount of time they can dedicate to other important tasks that only human experts can do.
+  \item A survey of archaeologists showed that few of them received dedicated training in how to properly categorize pottery fragments.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+\begin{center}
+\textbf{Results of Footprint Analysis for Two Sets of Theropod Tracks}
+\end{center}
+\noindent\resizebox{\linewidth}{!}{
+\begin{tabular}{|l|l|l|l|}
+\hline
+Tracks & Estimated footprint length (centimeters) & Average stride length (meters) & Estimated mean speed (meters per second) \\
+\hline
+La Torre 6A & 32.8 & 5.23 & 6.5--10.3 \\
+\hline
+La Torre 6B & 28.9 & 5.57 & 8.8--12.4 \\
+\hline
+\end{tabular}
+}
+
+The table shows data from paleontologist Angélica Torices and colleagues' 2021 study of two sets of dinosaur tracks preserved in a fossilized lake bed in Spain. The tracks, referred to as La Torre 6A and La Torre 6B, were left by two individual theropods (dinosaurs that walked on two legs). The team's findings suggest that of the two theropods, the one that left the La Torre 6B tracks had a higher maximum mean speed, \,\rule{2cm}{0.4pt}\,
+\vspace{6pt}
+
+Which choice most effectively uses data from the table to complete the claim?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item a longer footprint, and a longer average stride.
+  \item a longer footprint, and a shorter average stride.
+  \item a shorter footprint, and a longer average stride.
+  \item a shorter footprint, and a shorter average stride.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+\begin{center}
+\textbf{Total Electoral College Votes and Popular Votes in the 15th US Presidential Election}
+\end{center}
+\noindent\resizebox{\linewidth}{!}{
+\begin{tabular}{|l|l|l|}
+\hline
+Candidate & Total electoral college votes & Total popular votes \\
+\hline
+James K. Polk & 170 & 1,339,494 \\
+\hline
+Henry Clay & 105 & 1,300,004 \\
+\hline
+James Gillespie Birney & 0 & 62,103 \\
+\hline
+\end{tabular}
+}
+
+A student is writing a paper on the history of the 15th presidential election in the United States, which was held in 1844. The student needs to determine how many electoral college votes were cast for the winning candidate, James K. Polk. According to the table, James K. Polk received \,\rule{2cm}{0.4pt}\,
+\vspace{6pt}
+
+Which choice most effectively uses data from the table to complete the statement?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item 170 electoral college votes.
+  \item 103 electoral college votes.
+  \item 62 electoral college votes.
+  \item 44 electoral college votes.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Narwhals are shy whales that live in the remote Arctic Ocean. Some of them have a long tusk, like a unicorn horn, with sensitive nerves. Narwhals are known for this tusk, but many actually don't have one and its purpose is unknown. One group of scientists came up with a possible purpose in 2014. The scientists suggested that the tusk may help narwhals determine when water around them is likely to start freezing and become dangerous for them. Marine biologist Kristin Laidre disagrees with that idea, though. She reasons that if the narwhal's tusk serves such an important purpose, then it's most likely that \,\rule{2cm}{0.4pt}\,
+\vspace{6pt}
+
+Which choice most logically completes the text?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item some narwhals would seek a new habitat.
+  \item fewer marine animals would also have tusks.
+  \item more narwhals would have a tusk.
+  \item narwhals would become less shy over time.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Scholars are increasingly exploring the communication and preservation of ecological knowledge through Indigenous songs (e.g., Sakha songs about local ecosystems and those of the Kaluli people about rainforest sounds). In one study, ethnobiologist Dana Lepofsky et al. received insight from Kwaxsistalla Wathl'thla, a song keeper for the Kwakwaka'wakw people in Canada, into songs referencing the people's use of terraced gardens in intertidal zones along the Pacific Northwest coast for the cultivation of clams for consumption. Archaeological evidence of significant increases in clam size and abundance in that area concurrent with the documented past implementation of the method described in the songs supports the conclusion that \,\rule{2cm}{0.4pt}\,
+\vspace{6pt}
+
+Which choice most logically completes the text?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item the practice used by ancestors of modern Kwakwaka'wakw people not only effectively maintained a food source but also promoted its robustness.
+  \item non-Indigenous people around the Pacific Northwest coast adopted the practice developed by the Kwakwaka'wakw people after observing its efficacy.
+  \item there is greater corroboration in the archaeological record of ecological practices described in Kwakwaka'wakw songs than of those described in Sakha and Kaluli songs.
+  \item although contemporary Kwakwaka'wakw people have a deep understanding of and appreciation for the fishing and farming practices used by their ancestors, they no longer implement those methods.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+In the novel \textit{Things Fall Apart} by Chinua Achebe, Okonkwo is a leader of Umuofia (a fictional Nigerian clan) and takes pride in his culture's traditions. However, when the arrival of European missionaries brings changes to Umuofia, the novel asks a central question: How \,\rule{2cm}{0.4pt}\,
+\vspace{6pt}
+
+Which choice completes the text so that it conforms to the conventions of Standard English?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Umuofia's traditions will be affected.
+  \item will Umuofia's traditions be affected.
+  \item Umuofia's traditions will be affected?
+  \item will Umuofia's traditions be affected?
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Smaller than poppy seeds, tardigrades are tiny, but they are tough. These minuscule animals can survive for thirty years without food or water, and \,\rule{2cm}{0.4pt}\, can withstand extreme temperatures as low as minus 328 degrees and as high as 304 degrees Fahrenheit.
+\vspace{6pt}
+
+Which choice completes the text so that it conforms to the conventions of Standard English?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item that
+  \item it
+  \item they
+  \item he
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Bonnie Buratti of NASA's Jet Propulsion Laboratory \,\rule{2cm}{0.4pt}\, data about Saturn's rings collected by the \textit{Cassini }spacecraft when she made an interesting discovery: the tiny moons embedded between and within Saturn's rings are shaped by the buildup of ring material on the moons' surfaces.
+\vspace{6pt}
+
+Which choice completes the text so that it conforms to the conventions of Standard English?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item studies
+  \item has been studying
+  \item will study
+  \item was studying
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+At eight paragraphs long, the preamble to the constitution of \,\rule{2cm}{0.4pt}\, country in Western Asia---is much longer than the one-paragraph preamble to the United States Constitution.
+\vspace{6pt}
+
+Which choice completes the text so that it conforms to the conventions of Standard English?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Bahrain---a
+  \item Bahrain, a
+  \item Bahrain a
+  \item Bahrain: a
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+With its towering, six-spired exterior of granitelike quartz monzonite, the Salt Lake Temple is one of the most instantly recognizable structures in the state of Utah. However, many people do not know that \,\rule{2cm}{0.4pt}\, built over the course of forty years, with construction beginning in 1853 and ending in 1893.
+\vspace{6pt}
+
+Which choice completes the text so that it conforms to the conventions of Standard English?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item it was
+  \item one was
+  \item they were
+  \item both were
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Arkansas aviator Louise Thaden was already a record breaker when she won the inaugural National Women's Air Derby, a race from California to Ohio, in August of 1929. \,\rule{2cm}{0.4pt}\, in December of 1928, Thaden had set an aviation record when she reached an altitude of 20,269 feet in a Travel Air biplane.
+\vspace{6pt}
+
+Which choice completes the text with the most logical transition?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Earlier,
+  \item However,
+  \item Next,
+  \item As a result,
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+``Wishcycling''---putting nonrecyclable items into recycling bins under the mistaken belief that those items can be recycled---ultimately does more harm than good. Nonrecyclable items, such as greasy pizza boxes, can contaminate recyclable materials, rendering entire batches unusable. \,\rule{2cm}{0.4pt}\, nonrecyclable products can damage recycling plants' machinery.
+\vspace{6pt}
+
+Which choice completes the text with the most logical transition?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Fittingly,
+  \item On the contrary,
+  \item Moreover,
+  \item Nevertheless,
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Establishing Coordinated Universal Time (UTC) is no easy task. Each month, readings of a single second from atomic clocks around the world are taken and sent to the International Bureau of Weights and Measures (BIPM) in France. \,\rule{2cm}{0.4pt}\, BIPM metrologists perform the meticulous work of assembling these minutely disparate readings into a globally shared time standard.
+\vspace{6pt}
+
+Which choice completes the text with the most logical transition?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item There,
+  \item In particular,
+  \item For example,
+  \item Conversely,
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+While researching a topic, a student has taken the following notes:
+
+\begin{itemize}
+
+\item The Haber-Bosch process is an industrial process used to manufacture ammonia (NH\textsubscript{3}).
+
+\item It was invented by chemists Fritz Haber and Carl Bosch in 1910.
+
+\item The process's primary reaction combines nitrogen (N\textsubscript{2}) from the air with hydrogen (H\textsubscript{2}).
+
+\item It requires an iron catalyst and high temperatures and pressures.
+
+\item Most of the ammonia produced by this process is used in fertilizers.
+
+\end{itemize}
+\vspace{6pt}
+
+The student wants to provide an overview of the Haber-Bosch process. Which choice most effectively uses relevant information from the notes to accomplish this goal?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item The Haber-Bosch process needs nitrogen, hydrogen, and an iron catalyst.
+  \item The Haber-Bosch process uses an iron catalyst along with high temperatures and pressures to manufacture ammonia from nitrogen and hydrogen.
+  \item Chemists Fritz Haber and Carl Bosch invented an industrial process to manufacture ammonia to be used in fertilizers.
+  \item In 1910, chemists Fritz Haber and Carl Bosch invented the Haber-Bosch process, which requires high temperatures and pressures.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+While researching a topic, a student has taken the following notes:
+
+\begin{itemize}
+
+\item The green iguana is a species of reptile.
+
+\item It can be found in Central America and Brazil.
+
+\item The green iguana primarily eats leaves and fruit.
+
+\item It has an average length of 4.8 feet.
+
+\end{itemize}
+\vspace{6pt}
+
+The student wants to specify the average length of the green iguana. Which choice most effectively uses relevant information from the notes to accomplish this goal?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item The green iguana can be found in Central America.
+  \item The green iguana has an average length of 4.8 feet.
+  \item One species of reptile found in Brazil primarily eats leaves and fruit.
+  \item The green iguana is a reptile that primarily eats leaves and fruit.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+While researching a topic, a student has taken the following notes:
+
+\begin{itemize}
+
+\item A lever is a simple machine consisting of a rigid beam and a fulcrum.
+
+\item The fulcrum is the point about which the beam pivots.
+
+\item The input force (effort) is the force applied to the lever.
+
+\item The output force (load) is the force that the lever exerts on another object.
+
+\item In first-class levers, the fulcrum is located between the effort and the load.
+
+\item In second-class levers, the load is located between the effort and the fulcrum.
+
+\end{itemize}
+\vspace{6pt}
+
+The student wants to contrast first-class levers and second-class levers. Which choice most effectively uses relevant information from the notes to accomplish this goal?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item In levers, the effort is the force applied to the lever; the load, in contrast, is the force that the lever exerts on another object.
+  \item In first-class and second-class levers, the fulcrum and the load are in different locations.
+  \item First-class levers are simple machines consisting of a rigid beam and a fulcrum, but then again, the same is true of second-class levers.
+  \item In first-class levers, the fulcrum is located between the effort and the load, but in second-class levers, the load is located between the effort and the fulcrum.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+While researching a topic, a student has taken the following notes: 
+
+\begin{itemize}
+
+\item Some atoms contain an excess of neutrons.
+
+\item Often, these neutrons form a ``skin'' on the atom's surface.
+
+\item An atom of lead-208 has a neutron skin.
+
+\item The thickness of its neutron skin is approximately 0.28 trillionths of a millimeter.
+
+\end{itemize}
+\vspace{6pt}
+
+The student wants to emphasize the thickness of lead-208's neutron skin. Which choice most effectively uses relevant information from the notes to accomplish this goal?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item The neutron skin surrounding an atom of lead-208 measures about 0.28 trillionths of a millimeter.
+  \item Atoms with excess neutrons will often acquire a neutron skin.
+  \item An atom of lead-208, like some other atoms, is surrounded by a neutron skin.
+  \item Neutrons surround the surface of an atom of lead-208.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+\onecolumn
+\thispagestyle{plainpage}
+\vfill
+\begin{center}
+\rule{0.8\textwidth}{0.5pt}\\[6pt]
+{\large\textbf{STOP}}\\[4pt]
+{\small If you finish before time is called, you may check your work on this module only.\\
+Do not turn to any other module in the test.}
+\end{center}
+\onecolumn
+\newpage
+\thispagestyle{plainpage}
+\begin{center}
+\vspace*{3in}
+{\large No Test Material On This Page}
+\end{center}
+
+\setmodulename{Hard}
+\onecolumn
+\newpage
+\thispagestyle{plainpage}
+\setcounter{questionnum}{0}
+\begin{center}
+{\Large\textbf{Reading and Writing}}\\[6pt]
+{\large 27 QUESTIONS}\\[4pt]
+{\large\textbf{Module}}\\
+{\Large\textbf{3}}
+\end{center}
+\vspace{8pt}
+\textbf{DIRECTIONS}
+
+The questions in this section address a number of important reading and writing skills. Each question includes one or more passages, which may include a table or graph. Read each passage and question carefully, and then choose the best answer to the question based on the passage(s).
+
+All questions in this section are multiple-choice with four answer choices. Each question has a single best answer.
+\vspace{8pt}
+\hrule
+\vspace{8pt}
+\twocolumn
+\pagestyle{questionpage}
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Containing over 160 billion base pairs of DNA resulting from polyploidy (whole genome duplication) and accumulation of noncoding DNA without significant deletion, the genome of \textit{Tmesipteris oblanceolata} (New Caledonian fork fern) is the largest known among eukaryotes---and, given the high biological costs of extremely large genomes, is unlikely to be \,\rule{2cm}{0.4pt}\,.
+\vspace{6pt}
+
+Which choice completes the text with the most logical and precise word or phrase?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item protracted
+  \item superseded
+  \item curtailed
+  \item obviated
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The following text is adapted from James Baldwin's 1956 novel \textit{Giovanni's Room}. The narrator is riding in a taxi down a street lined with food vendors and shoppers in Paris, France.
+
+\vspace{6pt}
+\begin{quote}
+
+The multitude of Paris seems to be dressed in blue every day but Sunday, when, for the most part, they put on an unbelievably festive black. Here they were now, in blue, \uline{disputing}, every inch, our passage, with their wagons, handtrucks, their bursting baskets carried at an angle steeply self-confident on the back.
+
+\end{quote}
+
+\textcopyright{}1956 by James Baldwin
+\vspace{6pt}
+
+As used in the text, what does the word ``disputing'' most nearly mean?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Arguing about
+  \item Disapproving of
+  \item Asserting possession of
+  \item Providing resistance to
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The following text is from Anita Desai's 2011 novella \textit{Translator Translated}. While working on her translation of a novel written in Odia (a language of India) into English, the narrator looks out her window at night to clear her mind.
+
+\vspace{6pt}
+\begin{quote}
+
+I tried to distract myself with these sights of the ordinary world, but in my mind it was the lines I had been translating and the lines that I had been writing that remained in the forefront. I longed for sleep to obliterate them but it eluded me. Perhaps everything would be normal again once I had sent off the manuscript, I thought, and looked forward to \uline{completing} the work.
+
+\end{quote}
+
+\textcopyright{}2011 by Anita Desai
+\vspace{6pt}
+
+As used in the text, what does the word ``completing'' most nearly mean?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Destroying
+  \item Finishing
+  \item Advertising
+  \item Rejecting
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The following text is from the 1989 novel \textit{The Ancient Child} by Kiowa writer N. Scott Momaday. The main character has achieved tremendous commercial success as a painter.
+
+\vspace{6pt}
+\begin{quote}
+
+More and more often he was asked to compromise his art or himself in one way or another, and more often than not he did so, for he was inclined to be passive and naïve; it was difficult for him to say no. Those who exhibited his work, who praised and purchased it, and who demanded its proliferation began to \uline{determine} it.
+
+\end{quote}
+
+\textcopyright{}1989 by N. Scott Momaday
+\vspace{6pt}
+
+As used in the text, what does the word ``determine'' most nearly mean?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Conclude
+  \item Dictate
+  \item Evaluate
+  \item Select
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Archeological excavation of Market Street Chinatown, a nineteenth-century Chinese American community in San Jose, California, provided the first evidence that Asian food products were imported to the United States in the 1800s: bones from a freshwater fish species native to Southeast Asia. \uline{\textit{Jinshanzhuang}---Hong Kong--based import/export firms---likely coordinated the fish's transport from Chinese-operated fisheries in Vietnam and Malaysia to North American markets.} This route reveals the (often overlooked) multinational dimensions of the trade networks linking Chinese diaspora communities.
+\vspace{6pt}
+
+Which choice best describes the function of the underlined sentence in the text as a whole?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item It explains why efforts to determine the country of origin of the items mentioned in the previous sentence remain inconclusive.
+  \item It provides information that helps support a claim about a discovery's significance that is presented in the following sentence.
+  \item It traces the steps that were taken to locate and recover the objects that are described in the previous sentence.
+  \item It outlines a hypothesis that additional evidence discussed in the following sentence casts some doubt on.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+\textbf{Text 1}
+
+Growth in the use of novel nanohybrids---materials created from the conjugation of multiple distinct nanomaterials, such as iron oxide and gold nanomaterials conjugated for use in magnetic imaging---has outpaced studies of nanohybrids' environmental risks. Unfortunately, risk evaluations based on nanohybrids' constituents are not reliable: \uline{conjugation may alter constituents' physiochemical properties such that innocuous nanomaterials form a nanohybrid that is anything but}.
+
+\vspace{8pt}
+\textbf{Text 2}
+
+The potential for enhanced toxicity of nanohybrids relative to the toxicity of constituent nanomaterials has drawn deserved attention, but the effects of nanomaterial conjugation vary by case. For instance, it was recently shown that a nanohybrid of silicon dioxide and zinc oxide preserved the desired optical transparency of zinc oxide nanoparticles while mitigating the nanoparticles' potential to damage DNA.
+\vspace{6pt}
+
+Based on the texts, how would the author of Text 2 most likely respond to the assertion in the underlined portion of Text 1?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item By concurring that the risk described in Text 1 should be evaluated but emphasizing that the risk is more than offset by the potential benefits of nanomaterial conjugation
+  \item By arguing that the situation described in Text 1 may not be representative but conceding that the effects of nanomaterial conjugation are harder to predict than researchers had expected
+  \item By denying that the circumstance described in Text 1 is likely to occur but acknowledging that many aspects of nanomaterial conjugation are still poorly understood
+  \item By agreeing that the possibility described in Text 1 is a cause for concern but pointing out that nanomaterial conjugation does not inevitably produce that result
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Having written the impassioned call to arms ``Letter to the Spanish Americans'' in 1791, Peruvian intellectual Juan Pablo Viscardo y Guzmán is often considered a forerunner for the independence movements in Latin America. But Viscardo's role in history would have remained insignificant were it not for Venezuelan revolutionary Francisco de Miranda, who was handed the unpublished letter after Viscardo's death. Miranda not only helped circulate the letter, but his edits and footnotes to the text position Miranda as a central figure in the text's creation.
+\vspace{6pt}
+
+Which choice best states the main idea of the text?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item The original authorship of ``Letter to the Spanish Americans'' is disputed by contemporary historians.
+  \item The majority of the most eloquently stated arguments in ``Letter to the Spanish Americans'' were written by Miranda.
+  \item Miranda played a crucial role in influencing the content and distribution of ``Letter to the Spanish Americans.''
+  \item ``Letter to the Spanish Americans'' persuaded many people in Latin America to pursue national independence.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Urbanization, industrialization, and the warming climate create thermal pollution (excess heat) in the shallow subsurface soil. Susanne A. Benz and colleagues analyzed thousands of sites on three continents under one scenario in which surface temperature remains at the current level and under another in which the surface reaches the maximum plausible temperature. They then categorized each site according to the percentage of local home heating needs that could be met using this excess subsurface heat. The team concluded that if surface temperature approaches the maximum plausible level, the percentage of sites where thermal pollution could feasibly contribute to meeting home heating needs will increase.
+\vspace{6pt}
+
+Which choice best describes data in the graph that support Benz and colleagues' conclusion?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Under both temperature conditions, less than 10\% of sites were in the up-to-25\% group, but at the maximum plausible surface temperature, almost 80\% of sites could have all their local heating needs met by thermal pollution.
+  \item At current surface temperatures, more than 80\% of the sites have no need for supplemental local home heating from subsurface thermal pollution, but at the maximum plausible surface temperature, more than 70\% of sites exhibit significantly greater home heating needs.
+  \item At current surface temperatures, more than 80\% of sites can meet, at most, 25\% of local home heating needs with subsurface thermal pollution, but at the maximum plausible surface temperature, more than 80\% of sites can meet greater than 25\% of local home heating needs.
+  \item At current surface temperatures, more than 80\% of the sites cannot use subsurface thermal pollution to meet any portion of local home heating needs, but at the maximum plausible surface temperature, that percentage drops below 20\%.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+\,\rule{2cm}{0.4pt}\,\,\rule{2cm}{0.4pt}\,\,\rule{2cm}{0.4pt}\,
+
+\begin{center}
+\textbf{Correlations Between Congestion Ratings and Features of the Crowd in Raters' Immediate Vicinity}
+\end{center}
+\noindent\resizebox{\linewidth}{!}{
+\begin{tabular}{|l|l|l|l|}
+\hline
+Crowd feature & Before obstacle & After obstacle & Overall \\
+\hline
+Density & 0.8592 & 0.7308 & 0.7447 \\
+\hline
+Velocity &  &  &  \\
+\hline
+\end{tabular}
+}
+
+Researcher Xiaolu Jia and colleagues monitored individuals' velocity and the surrounding crowd density as a group of study participants walked through a space and navigated around an obstacle. Participants rated how congested it seemed before the obstacle, after the obstacle, and overall, and the researchers correlated those ratings with velocity and density. (Correlations range from \,\rule{2cm}{0.4pt}\, to 1, with greater distance from 0 indicating greater strength). The researchers concluded that the correlations with velocity are stronger than those with density.
+\vspace{6pt}
+
+Which choice best describes data from the table that support the researchers' conclusion?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item The correlation between congestion ratings before the obstacle and density is further from 0 than the correlation between overall congestion rating and velocity is.
+  \item The correlation between congestion ratings before the obstacle and velocity is further from 0 than the correlation between congestion overall and velocity is.
+  \item For each of the three ratings, the correlation with velocity is negative while the correlation with density is positive.
+  \item For each of the three ratings, correlations with velocity are further from 0 than the corresponding correlations with density are.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Initially observed in 2017, the interstellar object `Oumuamua is the first object of its kind to be seen in our solar system. Researchers have been puzzled because its acceleration cannot be entirely explained by the gravitational pull of nearby bodies: there must be a nongravitational influence on its velocity and trajectory. Some previously suggested explanations for this nongravitational acceleration involve mechanisms that are unlikely or unrealistic, such as geometric effects from `Oumuamua being potentially composed of several spatially separated bodies. Now, Jennifer Bergner and colleagues propose that the nongravitational acceleration is due to the gaseous expulsion of entrapped hydrogen from `Oumuamua's water-rich icy body.
+\vspace{6pt}
+
+Which statement, if true, would most strongly support the claim made by Bergner and colleagues about the cause of `Oumuamua's acceleration?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Existing proposed models of outgassing from `Oumuamua include the direct conversion of nitrogen or carbon monoxide from a solid to a gaseous state without becoming liquid, but these models have theoretical or observational inconsistencies.
+  \item `Oumuamua's trajectory is inconsistent with a nongravitational acceleration that would be caused by the release of hydrogen gas resulting from the processing of water ice (H\textsubscript{2}O), but the interstellar object's observable properties can be explained if it has a significant component of molecular hydrogen ice (H\textsubscript{2}).
+  \item Since nongravitational accelerations of interstellar objects are several orders of magnitude weaker than gravitational accelerations, deviation from behavior that could be fully attributed to gravitational pull has been detected on a limited number of objects similar to `Oumuamua.
+  \item Exposure to interstellar cosmic radiation can result in the formation of embedded pockets of hydrogen gas in water ice; moreover, when traveling through the solar system, `Oumuamua experienced warming sufficient to alter its icy structure and allow for outgassing.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+In 1534 CE, King Henry VIII of England split with the Catholic Church and declared himself head of the Church of England, in part because Pope Clement VII refused to annul his marriage to Catherine of Aragon. Two years later, Henry VIII introduced a policy titled the Dissolution of the Monasteries that by 1540 had resulted in the closure of all Catholic monasteries in England and the confiscation of their estates. Some historians assert that the enactment of the policy was primarily motivated by perceived financial opportunities.
+\vspace{6pt}
+
+Which quotation from a scholarly article best supports the assertion of the historians mentioned in the text?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item ``At the time of the Dissolution of the Monasteries, about 2 percent of the adult male population of England were monks; by 1690, the proportion of the adult male population who were monks was less than 1 percent.''
+  \item ``A contemporary description of the Dissolution of the Monasteries, Michael Sherbrook's \textit{Falle of the Religious Howses}, recounts witness testimony that monks were allowed to keep the contents of their cells and that the monastery timber was purchased by local yeomen.''
+  \item ``In 1535, the year before enacting the Dissolution of the Monasteries, Henry commissioned a survey of the value of church holdings in England---the work, performed by sheriffs, bishops, and magistrates, began that January and was swiftly completed by the summer.''
+  \item ``The October 1536 revolt known as the Pilgrimage of Grace had several economic motives: high food prices due to a poor harvest the prior year; the Dissolution of the Monasteries, which closed reliable sources of food and shelter for many; and rents and taxes throughout Northern England that were not merely high but predatory.''
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The Household, Income and Labour Dynamics in Australia Survey (HILDA) examines trends in economic well-being among 25,000 people in Australia unfolding over many years. As is true of most longitudinal studies, this need for years of data collection results in high costs. By contrast, a relatively straightforward fitness study, such as one that is merely trying to identify the percentage of regular exercisers in a city who do weight training, may not need a large budget because \,\rule{2cm}{0.4pt}\,
+\vspace{6pt}
+
+Which choice most logically completes the text?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item longitudinal methods are probably suitable for the fitness study.
+  \item it would be easy for HILDA researchers to add questions to their economic well-being study.
+  \item 25,000 people is more than enough for HILDA to find trends in economic well-being.
+  \item the fitness study can be done well without years of data collection.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+In the South Pacific, New Caledonian crows use two different kinds of stick tools. One tool is complex. The crows shape a stick from a rare plant into a hook. The other tool is basic. The crows find a stick without a hook on the ground. The hooked tool is harder to get but is much better than the basic tool at removing prey from holes. When studying New Caledonian crows, ecologist Barbara Klump found that they hold the hooked tools in their claws when not using them, or they carefully put them in a safe place. The crows don't do the same with the basic tools. This suggests to Klump that the \,\rule{2cm}{0.4pt}\,
+\vspace{6pt}
+
+Which choice most logically completes the text?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item hooked stick tools are more valuable to the crows than the stick tools without hooks.
+  \item hooked stick tools are easier for most of the crows to hold than the stick tools without hooks.
+  \item crows prefer to share their hooked stick tools but don't share the stick tools without hooks.
+  \item crows realize that both kinds of stick tools are less effective than their claws are at removing prey from holes.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Colonized by Spain in the 1600s, New Mexico is home to a dialect of Spanish that differs significantly from dialects spoken in Spain's other former colonies in the Americas. Most notably, the New Mexican dialect retains older features of the language that other dialects lost in later centuries. But why would it have done so? New Mexico was so distant from population centers in Spain's other colonies that it attracted few colonists after its initial colonization. Geographical isolation in turn would have limited the exposure of New Mexican colonists to changes occurring to Spanish grammar and vocabulary elsewhere in the empire. Thus, the present-day uniqueness of the New Mexican dialect suggests the extent to which \,\rule{2cm}{0.4pt}\,
+\vspace{6pt}
+
+Which choice most logically completes the text?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item a language can protect itself from being influenced by other languages.
+  \item the grammar and vocabulary of any given language change from one generation to the next.
+  \item geographical isolation can influence how a language develops.
+  \item speakers of one dialect of a language can understand speakers of another dialect of that language.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The element carbon has the highest melting point \,\rule{2cm}{0.4pt}\, all the elements on the periodic table---3,500 degrees Celsius.
+\vspace{6pt}
+
+Which choice completes the text so that it conforms to the conventions of Standard English?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item of
+  \item of---
+  \item of,
+  \item of:
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Every last second of space shuttle mission STS-79, which lasted ten days and three hours, \,\rule{2cm}{0.4pt}\, carefully monitored by a team of experts.
+\vspace{6pt}
+
+Which choice completes the text so that it conforms to the conventions of Standard English?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item have been
+  \item are
+  \item was
+  \item were
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+In 1994, almost 200 years after the death of Wang Zhenyi, the International Astronomical \,\rule{2cm}{0.4pt}\, the contributions of the barrier-breaking 18th-century astronomer and author of ``Dispute of the Procession of the Equinoxes,'' naming a crater on Venus after her.
+\vspace{6pt}
+
+Which choice completes the text so that it conforms to the conventions of Standard English?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Union would finally acknowledge
+  \item Union to finally acknowledge
+  \item Union, having finally acknowledged
+  \item Union, finally acknowledging
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Like other amphibians, the wood frog (\textit{Rana sylvatica}) is unable to generate its own heat, so during periods of subfreezing temperatures, it \,\rule{2cm}{0.4pt}\, by producing large amounts of glucose, a sugar that helps prevent damaging ice from forming inside its cells.
+\vspace{6pt}
+
+Which choice completes the text so that it conforms to the conventions of Standard English?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item had survived
+  \item survived
+  \item would survive
+  \item survives
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Nigerian American artist Toyin Ojih Odutola uses black-ink pens to create highly detailed drawings of human figures. Her portrait of novelist Zadie \,\rule{2cm}{0.4pt}\, is displayed in the National Portrait Gallery in London.
+\vspace{6pt}
+
+Which choice completes the text so that it conforms to the conventions of Standard English?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Smith:
+  \item Smith---
+  \item Smith
+  \item Smith,
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+In 2008, two years after the death of science fiction writer Octavia Butler, the Huntington Library in \,\rule{2cm}{0.4pt}\, received a collection of more than 8,000 items, including Butler's private notes, research materials, manuscripts, photos, and drawings. Today, the Octavia E. Butler Collection is one of the most researched archives at the library.
+\vspace{6pt}
+
+Which choice completes the text so that it conforms to the conventions of Standard English?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item California,
+  \item California:
+  \item California---
+  \item California
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The Madison is a type of line dance that involves neat rows of dancers performing a repeated sequence of steps in unison. \,\rule{2cm}{0.4pt}\, many other dances are also defined by order, repetition, and synchronicity, but the Madison is distinguished by its extreme uniformity; when an auditorium full of dancers performs the Madison, one almost gets the impression of a military march.
+\vspace{6pt}
+
+Which choice completes the text with the most logical transition?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item However,
+  \item Of course,
+  \item Specifically,
+  \item Moreover,
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+``Tulip mania''---the rapid rise and sudden fall of the price of tulip bulbs in seventeenth-century Amsterdam---is often cited as an example of the perils of rampant market speculation. However, recent research has demonstrated that the episode was neither as frenzied nor as disastrous as has been thought. The popular myth surrounding it, \,\rule{2cm}{0.4pt}\, should be regarded with some skepticism.
+\vspace{6pt}
+
+Which choice completes the text with the most logical transition?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item for example,
+  \item by contrast,
+  \item nevertheless,
+  \item therefore,
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Working together with the Navajo Nation Department of Water Resources, Dr. Lani Tsinnajinnie analyzed data about snowpack levels in the Chuska Mountains. She found that the snowpack (the amount of snow on the ground) was deepest in early March at lower elevations. At higher elevations, \,\rule{2cm}{0.4pt}\, the snowpack was deepest in mid-March.
+\vspace{6pt}
+
+Which choice completes the text with the most logical transition?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item in other words,
+  \item for instance,
+  \item on the other hand,
+  \item in summary,
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+While researching a topic, a student has taken the following notes:
+
+\begin{itemize}
+
+\item Leigh Torres is a marine ecologist.
+
+\item She conducted a study of blue whales in New Zealand's South Taranaki Bight region.
+
+\item She wanted to know how ocean temperature affects where the whales forage for krill in that region.
+
+\item She found that during a marine heat wave, the whales foraged farther offshore than they had during cooler periods.
+
+\item The offshore waters, which were colder than areas closer to shore, had a higher relative abundance of krill.
+
+\end{itemize}
+\vspace{6pt}
+
+The student wants to emphasize the aim of the research study. Which choice most effectively uses relevant information from the notes to accomplish this goal?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Analyzing ocean temperature data, Torres found that during a marine heat wave, blue whales foraged farther offshore than they had during cooler periods.
+  \item In her study, Torres sought to determine how ocean temperature affects where blue whales forage for krill in the South Taranaki Bight region.
+  \item Torres's study revealed that blue whales were attracted to offshore waters with a relatively high abundance of krill.
+  \item Torres, a marine ecologist, studied blue whales in the South Taranaki Bight region, where the whales forage.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+While researching a topic, a student has taken the following notes:
+
+\begin{itemize}
+
+\item Phobetor, a name drawn from Greek mythology, is an exoplanet that orbits the star PSR B1257+12, also known as Lich.
+
+\item Phobetor's mass is 0.01 times that of Jupiter, or 0.01 Jupiter masses.
+
+\item Mastika, which means ``gem'' or ``jewel'' in Malay, is an exoplanet that orbits the star HD 179949, also known as Gumala.
+
+\item Mastika's mass is 0.92 Jupiter masses.
+
+\end{itemize}
+\vspace{6pt}
+
+The student wants to make and support a generalization about exoplanets. Which choice most effectively uses relevant information from the notes to accomplish this goal?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Exoplanets that are named Phobetor orbit Lich, and those that are named Mastika orbit Gumala.
+  \item Even though Phobetor and Mastika are both exoplanets, their masses are different: Phobetor's mass is 0.01 Jupiter masses, and Mastika's is 0.92 Jupiter masses.
+  \item Many stars have both a designation and a proper name; for instance, PSR B1257+12 is also known as Lich, and HD 179949 is also known as Gumala.
+  \item Exoplanet names have diverse origins, a fact that can be seen in the cases of Phobetor, a name drawn from Greek mythology, and Mastika, which means ``gem'' or ``jewel'' in Malay.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+While researching a topic, a student has taken the following notes:
+
+\begin{itemize}
+
+\item In 1978, Sámi activists staged protests to block the construction of a dam on the Alta River in Norway.
+
+\item The dam would disrupt Sámi fishing and reindeer herding.
+
+\item The dam was ultimately built, but the Alta conflict had a lasting impact.
+
+\item It brought international attention to the issue of Sámi rights.
+
+\item It led to a set of 2005 legal protections establishing Sámi rights to lands, waters, and resources.
+
+\end{itemize}
+\vspace{6pt}
+
+The student wants to make and support a generalization about the Alta conflict. Which choice most effectively uses relevant information from the notes to accomplish this goal?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item During the Alta conflict, Sámi activists staged protests to block the construction of a dam on the Alta River in Norway that would disrupt local fishing and reindeer herding.
+  \item Although the dam that the Sámi activists had protested was ultimately built, the Alta conflict had a lasting impact.
+  \item Sámi rights to lands, waters, and resources received international attention and legal protections as a result of the Alta conflict.
+  \item The Alta conflict had a lasting impact, resulting in international attention and legal protections for Sámi rights to lands, waters, and resources.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+While researching a topic, a student has taken the following notes:
+
+\begin{itemize}
+
+\item The factors that affect clutch size (the number of eggs laid at one time) have been well studied in birds but not in lizards.
+
+\item A team led by Shai Meiri of Tel Aviv University investigated which factors influence lizard clutch size.
+
+\item Meiri's team obtained clutch-size and habitat data for over 3,900 lizard species and analyzed the data with statistical models.
+
+\item Larger clutch size was associated with environments in higher latitudes that have more seasonal change.
+
+\item Lizards in higher-latitude environments may lay larger clutches to take advantage of shorter windows of favorable conditions.
+
+\end{itemize}
+\vspace{6pt}
+
+The student wants to emphasize the aim of the research study. Which choice most effectively uses relevant information from the notes to accomplish this goal?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Researchers wanted to know which factors influence lizard egg clutch size because such factors have been well studied in birds but not in lizards.
+  \item After they obtained data for over 3,900 lizard species, researchers determined that larger clutch size was associated with environments in higher latitudes that have more seasonal change.
+  \item We now know that lizards in higher-latitude environments may lay larger clutches to take advantage of shorter windows of favorable conditions.
+  \item Researchers obtained clutch-size and habitat data for over 3,900 lizard species and analyzed the data with statistical models.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+\onecolumn
+\thispagestyle{plainpage}
+\vfill
+\begin{center}
+\rule{0.8\textwidth}{0.5pt}\\[6pt]
+{\large\textbf{STOP}}\\[4pt]
+{\small If you finish before time is called, you may check your work on this module only.\\
+Do not turn to any other module in the test.}
+\end{center}
+\onecolumn
+\newpage
+\thispagestyle{plainpage}
+\begin{center}
+\vspace*{3in}
+{\large No Test Material On This Page}
+\end{center}
+
+\setmodulename{Medium}
+\onecolumn
+\newpage
+\thispagestyle{plainpage}
+\setcounter{questionnum}{0}
+\begin{center}
+{\Large\textbf{Math}}\\[6pt]
+{\large 22 QUESTIONS}\\[4pt]
+{\large\textbf{Module}}\\
+{\Large\textbf{1}}
+\end{center}
+\vspace{8pt}
+\textbf{DIRECTIONS}
+
+The questions in this section address a number of important math skills. Use of a calculator is permitted for all questions.
+
+Unless otherwise indicated: All variables and expressions represent real numbers. Figures provided are drawn to scale. All figures lie in a plane. The domain of a given function $f$ is the set of all real numbers $x$ for which $f(x)$ is a real number.
+\vspace{8pt}
+\hrule
+\vspace{8pt}
+\twocolumn
+\pagestyle{questionpage}
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Julissa needs at least $100$ hours of flight time to get her private pilot certification. If Julissa already has $86$ hours of flight time, what is the minimum number of additional hours of flight time Julissa needs to get her private pilot certification?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $14$
+  \item $76$
+  \item $86$
+  \item $186$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+A right circular cylinder has a volume of $377$ cubic centimeters. The area of the base of the cylinder is $13$ square centimeters. What is the height, in centimeters, of the cylinder?
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Which of the following is an equivalent form of $(1 . 5 x - 2 . 4 )^{2} - (5 . 2 x^{2} - 6 . 4 )$ ?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $-2 . 2 x^{2} + 1 . 6$
+  \item $-2 . 2 x^{2} + 11 . 2$
+  \item $-2 . 95 x^{2} - 7 . 2 x + 12 . 16$
+  \item $-2 . 95 x^{2} - 7 . 2 x + 0 . 64$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Based on a random sample from a population, a researcher estimated that the mean value of a certain variable for the population is $20.5$, with an associated margin of error of $1$. Which of the following is the most appropriate conclusion?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item It is plausible that the actual mean value of the variable for the population is between $19.5$ and $21.5$.
+  \item It is not possible that the mean value of the variable for the population is less than $19.5$ or greater than $21.5$.
+  \item Every value of the variable in the population is between $19.5$ and $21.5$.
+  \item The mean value of the variable for the population is $20.5$.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+What value of \textbackslash\{\}textit\{p\} is the solution of the equation above?
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+If $\frac{6}{7}$, what is the value of $7 p$?
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Line $p$ is defined by $2$. Line $r$ is perpendicular to line $p$ in the \textbackslash\{\}textit\{xy\}-plane. What is the slope of line $r$?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $-$
+  \item $- \frac{1}{9}$
+  \item $\frac{1}{9}$
+  \item $9$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Line $k$ is defined by $y$. Line $j$ is parallel to line $k$ in the \textbackslash\{\}textit\{xy\}-plane. What is the slope of line $j$?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $\frac{7}{17}$
+  \item $\frac{17}{7}$
+  \item $4$
+  \item $17$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+$g$
+
+The given function $g$ models the number of gallons of gasoline that remains from a full gas tank in a car after driving $m$ miles. According to the model, about how many gallons of gasoline are used to drive each mile?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $0.05$
+  \item $12.1$
+  \item $20$
+  \item $242.0$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+In the \textbackslash\{\}textit\{xy\}-plane, the points $-2 , 3$ and $4 , -5$ lie on the graph of which of the following linear functions?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $f(x) = x + 5$
+  \item $f(x) = one half x + 4$
+  \item $f(x) = negative four thirds x + one third$
+  \item $f(x) = negative three halves x + 1$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+In North America, the standard width of a parking space is at least 7.5 feet and no more than 9.0 feet. A restaurant owner recently resurfaced the restaurant's parking lot and wants to determine the number of parking spaces, \textbackslash\{\}textit\{n\}, in the parking lot that could be placed perpendicular to a curb that is 135 feet long, based on the standard width of a parking space. Which of the following describes all the possible values of \textbackslash\{\}textit\{n\} ?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $18 \leq n which \leq 135$
+  \item $7 . 5 \leq n which \leq 9$
+  \item $15 \leq n which \leq 135$
+  \item $15 \leq n which \leq 18$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Two nearby trees are perpendicular to the ground, which is flat. One of these trees is $10$ feet tall and has a shadow that is $5$ feet long. At the same time, the shadow of the other tree is $2$ feet long. How tall, in feet, is the other tree?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $3$
+  \item $4$
+  \item $8$
+  \item $27$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+What is the product of the solutions to the given equation?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item 8
+  \item 3
+  \item $-3$
+  \item $-8$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+If $x y$ is a solution to the system of equations above, which of the following could be the value of \textbackslash\{\}textit\{x \}?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item --1
+  \item 0
+  \item 2
+  \item 3
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The function $p$ is defined by $p$. What is the value of $n$ when $p$ is equal to $56$?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $2$
+  \item $\frac{8}{3}$
+  \item $7$
+  \item $8$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+$f$
+
+If the given function $f$ is graphed in the \textbackslash\{\}textit\{xy\}-plane, where $y$, what is an \textbackslash\{\}textit\{x\}-intercept of the graph?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $(-12,0)$
+  \item $(-30,0)$
+  \item $(-360,0)$
+  \item $(12,0)$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{figures/f1fa0821_stem_0.pdf}
+\end{center}
+
+
+
+The graph gives the estimated population $y$, in thousands, of a town $x$ years since $2003$, where $0$. Which of the following best describes the increase in the estimated population from $x$ to $x$?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item The estimated population at $x$ is $0.5$ times the estimated population at $x$.
+  \item The estimated population at $x$ is $1.5$ times the estimated population at $x$.
+  \item The estimated population at $x$ is $2.5$ times the estimated population at $x$.
+  \item The estimated population at $x$ is $3.5$ times the estimated population at $x$.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The mean and the median of the five numbers above are equal. Which of the following is NOT a possible value of \textbackslash\{\}textit\{x \}?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item 6
+  \item 11
+  \item 16
+  \item 21
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Pure beeswax has a density of 0.555 ounce per cubic inch. An online company sells pure beeswax at a price of \$8.00 per ounce. What is the selling price, in dollars per cubic inch, for pure beeswax purchased from this company?
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+One leg of a right triangle has a length of $43.2$ millimeters. The hypotenuse of the triangle has a length of $196.8$ millimeters. What is the length of the other leg of the triangle, in millimeters?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $43.2$
+  \item $120$
+  \item $192$
+  \item $201.5$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+$x + 3 = - 2 y + 5$
+
+$x - 3 = 2 y + 7$
+
+The solution to the given system of equations is $(x,y)$. What is the value of $2 x$?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $-$
+  \item $6$
+  \item $12$
+  \item $24$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+In the given scatterplot, a line of best fit for the data is shown.
+
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{figures/2e74e403_stem_0.pdf}
+\end{center}
+
+
+
+Which of the following is closest to the slope of this line of best fit?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $7$
+  \item $0.7$
+  \item $-$
+  \item $-$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+\onecolumn
+\thispagestyle{plainpage}
+\vfill
+\begin{center}
+\rule{0.8\textwidth}{0.5pt}\\[6pt]
+{\large\textbf{STOP}}\\[4pt]
+{\small If you finish before time is called, you may check your work on this module only.\\
+Do not turn to any other module in the test.}
+\end{center}
+\onecolumn
+\newpage
+\thispagestyle{plainpage}
+\begin{center}
+\vspace*{3in}
+{\large No Test Material On This Page}
+\end{center}
+
+\setmodulename{Easy}
+\onecolumn
+\newpage
+\thispagestyle{plainpage}
+\setcounter{questionnum}{0}
+\begin{center}
+{\Large\textbf{Math}}\\[6pt]
+{\large 22 QUESTIONS}\\[4pt]
+{\large\textbf{Module}}\\
+{\Large\textbf{2}}
+\end{center}
+\vspace{8pt}
+\textbf{DIRECTIONS}
+
+The questions in this section address a number of important math skills. Use of a calculator is permitted for all questions.
+
+Unless otherwise indicated: All variables and expressions represent real numbers. Figures provided are drawn to scale. All figures lie in a plane. The domain of a given function $f$ is the set of all real numbers $x$ for which $f(x)$ is a real number.
+\vspace{8pt}
+\hrule
+\vspace{8pt}
+\twocolumn
+\pagestyle{questionpage}
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+A rectangle has a length of $64$ inches and a width of $32$ inches. What is the area, in square inches, of the rectangle?
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Which expression is equivalent to $20$?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $10 w$
+  \item $13 w$
+  \item $19 w$
+  \item $21 w$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The expression $2 x^{2} + a x$ is equivalent to $x \cdot (2 x + 7 )$ for some constant \textbackslash\{\}textit\{a\}. What is the value of \textbackslash\{\}textit\{a\} ?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item 2
+  \item 3
+  \item 4
+  \item 7
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+$2.6$
+
+What value of $x$ is the solution to the given equation?
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+$8$
+
+What value of $x$ is the solution to the given equation?
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The \textbackslash\{\}textit\{y\}-intercept of the graph of $y = - 6 x - 32$ in the \textbackslash\{\}textit\{xy\}-plane is $(0,y)$. What is the value of $y$?
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The table above shows some pairs of \textbackslash\{\}textit\{x\} values and \textbackslash\{\}textit\{y\} values. Which of the following equations could represent the relationship between \textbackslash\{\}textit\{x\} and \textbackslash\{\}textit\{y\} ?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $y = 2 x + 3$
+  \item $y = 3 x - 2$
+  \item $y = 4 x - one$
+  \item $y = 5 x$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The graph shown models the number of candy bars a certain machine wraps with a label in $x$ seconds.
+
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{figures/13294295_stem_0.pdf}
+\end{center}
+
+
+
+According to the graph, what is the estimated number of candy bars the machine wraps with a label per second?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $2$
+  \item $40$
+  \item $78$
+  \item $80$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{figures/2ecce641_stem_0.pdf}
+\end{center}
+
+
+
+A bank account was opened with an initial deposit. Over the next several months, regular deposits were made into this account, and there were no withdrawals made during this time. The graph of the function $f$ shown, where $y$, estimates the account balance, in dollars, in this bank account $x$ months since the initial deposit. To the nearest whole dollar, what is the amount of the initial deposit estimated by the graph?
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+For the linear function $f$, the graph of $y$ in the \textbackslash\{\}textit\{xy\}-plane has a slope of $39$ and passes through the point $(0,0)$. Which equation defines $f$?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $f$
+  \item $f$
+  \item $f$
+  \item $f$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The total cost, in dollars, to rent a surfboard consists of a $$$ service fee and a $$$ per hour rental fee. A person rents a surfboard for $t$ hours and intends to spend a maximum of $$$ to rent the surfboard. Which inequality represents this situation?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $10$
+  \item $10$
+  \item $25$
+  \item $25$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{figures/d5f349b7_stem_0.pdf}
+\end{center}
+
+
+
+Right triangles $P Q R$ and $S T U$ are similar, where $P$ corresponds to $S$. If the measure of angle $Q$ is $18$, what is the measure of angle $S$?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $18$
+  \item $72$
+  \item $82$
+  \item $162$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{figures/3f8d5876_stem_0.pdf}
+\end{center}
+
+
+
+The graph of a system of a linear equation and a nonlinear equation is shown. What is the solution $(x,y)$ to this system?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $(0,0)$
+  \item $(0,4)$
+  \item $(4,5)$
+  \item $(5,0)$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+\textbackslash\{\}fbox\{\textbackslash\{\}parbox\{0.9\textbackslash\{\}linewidth\}\{\textbackslash\{\}small Graph of a system of a curve and a line in the x y plane with the origin labeled O. The x axis ranges from negative 2 to 9 in increments of 1. The y axis ranges from negative 2 to 9 in increments of 1. Refer to long description.\}\}
+
+The graph of a system of a linear equation and a nonlinear equation is shown. What is the solution $(x,y)$ to this system?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $(0,0)$
+  \item $(0,2)$
+  \item $(2,4)$
+  \item $(4,0)$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The function $f$ is defined by $f$. What is the value of $f$ when $x = 3$?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $\frac{1}{3}$
+  \item $\frac{1}{6}$
+  \item $\frac{1}{9}$
+  \item $\frac{1}{18}$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{figures/ad376f1a_stem_0.pdf}
+\end{center}
+
+
+
+The graph of $y$ is shown in the \textbackslash\{\}textit\{xy\}-plane. What is the value of $f$?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $-$
+  \item $0$
+  \item $\frac{3}{5}$
+  \item $3$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+$2$, $9$, $14$, $23$, $32$
+
+What is the mean of the data shown?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $14$
+  \item $16$
+  \item $17$
+  \item $32$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+$21$ is $21$ of what number?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $0$
+  \item $1$
+  \item $42$
+  \item $100$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Each face of a fair $14$-sided die is labeled with a number from $1$ through $14$, with a different number appearing on each face. If the die is rolled one time, what is the probability of rolling a $2$?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $\frac{1}{14}$
+  \item $\frac{2}{14}$
+  \item $\frac{12}{14}$
+  \item $\frac{13}{14}$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+In the table above, the ratio of \textbackslash\{\}textit\{y\} to \textbackslash\{\}textit\{x\} for each ordered pair is constant. What is the value of \textbackslash\{\}textit\{k \}?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item 28
+  \item 36
+  \item 80
+  \item 160
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+If $x y$ is the solution to the given system of equations, what is the value of \textbackslash\{\}textit\{y\} ?
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The line graph shows the number of graduates from the classes of 2001 through 2007 at a certain school who enrolled in college within 24 months of graduation. Of the following, which class had the fewest graduates who enrolled in college within 24 months of graduation?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item 2002
+  \item 2004
+  \item 2005
+  \item 2007
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+\onecolumn
+\thispagestyle{plainpage}
+\vfill
+\begin{center}
+\rule{0.8\textwidth}{0.5pt}\\[6pt]
+{\large\textbf{STOP}}\\[4pt]
+{\small If you finish before time is called, you may check your work on this module only.\\
+Do not turn to any other module in the test.}
+\end{center}
+\onecolumn
+\newpage
+\thispagestyle{plainpage}
+\begin{center}
+\vspace*{3in}
+{\large No Test Material On This Page}
+\end{center}
+
+\setmodulename{Hard}
+\onecolumn
+\newpage
+\thispagestyle{plainpage}
+\setcounter{questionnum}{0}
+\begin{center}
+{\Large\textbf{Math}}\\[6pt]
+{\large 22 QUESTIONS}\\[4pt]
+{\large\textbf{Module}}\\
+{\Large\textbf{3}}
+\end{center}
+\vspace{8pt}
+\textbf{DIRECTIONS}
+
+The questions in this section address a number of important math skills. Use of a calculator is permitted for all questions.
+
+Unless otherwise indicated: All variables and expressions represent real numbers. Figures provided are drawn to scale. All figures lie in a plane. The domain of a given function $f$ is the set of all real numbers $x$ for which $f(x)$ is a real number.
+\vspace{8pt}
+\hrule
+\vspace{8pt}
+\twocolumn
+\pagestyle{questionpage}
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+If $x y$ is a solution to the system of equations above, which of the following is a possible value of \textbackslash\{\}textit\{x\}?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item 0
+  \item 1
+  \item 2
+  \item 3
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The equation $(x + 6 )^{2} + (y + 3 )^{2} = 121$ defines a circle in the \textbackslash\{\}textit\{xy\}‑plane. What is the radius of the circle?
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Which of the following expressions has a factor of $x$, where $b$ is a positive integer constant?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $3 {x}^{2} + 7 x + 14 b$
+  \item $3 {x}^{2} + 28 x + 14 b$
+  \item $3 {x}^{2} + 42 x + 14 b$
+  \item $3 {x}^{2} + 49 x + 14 b$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The results of two random samples of votes for a proposition are shown above. The samples were selected from the same population, and the margins of error were calculated using the same method. Which of the following is the most appropriate reason that the margin of error for sample A is greater than the margin of error for sample B?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item Sample A had a smaller number of votes that could not be recorded.
+  \item Sample A had a higher percent of favorable responses.
+  \item Sample A had a larger sample size.
+  \item Sample A had a smaller sample size.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+A factory makes $9$-inch, $7$-inch, and $4$-inch concrete screws. During a certain day, the number of $9$-inch concrete screws that the factory makes is $5$ times the number $n$ of $7$-inch concrete screws, and the number of $4$-inch concrete screws is $22$. During this day, the factory makes $100$ concrete screws total. Which equation represents this situation?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $9$
+  \item $9$
+  \item $5$
+  \item $6$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Keenan made $32$ cups of vegetable broth. Keenan then filled $x$ small jars and $y$ large jars with all the vegetable broth he made. The equation $3$ represents this situation. Which is the best interpretation of $5 y$ in this context?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item The number of large jars Keenan filled
+  \item The number of small jars Keenan filled
+  \item The total number of cups of vegetable broth in the large jars
+  \item The total number of cups of vegetable broth in the small jars
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The function $f$ is defined as $19$ more than $4$ times a number $x$. If $y$\textbackslash\{\}textit\{ \}is graphed in the $x y$-plane, what is the best interpretation of the\textbackslash\{\}textit\{ \}$x$-intercept?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item When $f$, the number is $- \frac{19}{4}$.
+  \item When the number is $0$,  $f$.
+  \item The value of $f$ increases by $1$ for each increase of $4$ in the value of the number.
+  \item For each increase of $1$ in the value of the number, $f$ increases by $4$.
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Which of the following consists of the \textbackslash\{\}textit\{y\}-coordinates of all the points that satisfy the system of inequalities above?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $y > 6$
+  \item $y > 4$
+  \item $y > five-halves$
+  \item $y > three-halves$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+In the figure above, $the length(l)ine segment B D = 6$ and $the length(l)ine segment A D = 8$. What is the length of $line segment D C$ ?
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+In right triangle $A B C$, angle $C$ is the right angle and $B C = 162$. Point $D$ on side $A B$ is connected by a line segment with point $E$ on side $A C$ such that line segment $D E$ is parallel to side $B C$ and $C E = 2 A E$. What is the length of line segment $D E$?
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+$2 {x}^{2} - 8 x - 7 = 0$
+
+One solution to the given equation can be written as $\frac{8-\sqrt{k}}{4}$, where $k$ is a constant. What is the value of $k$?
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Let the function \textbackslash\{\}textit\{p\} be defined as $p(x) = the fraction with numerator (x - c )^{2} +, 160 and denominator, 2 c end fraction$, where \textbackslash\{\}textit\{c\} is a constant. If $p(c) =, 10$, what is the value of $p(1)2$ ?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item 10.00
+  \item 10.25
+  \item 10.75
+  \item 11.00
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+$f(x) =, -500 x^{2} + 25,000 x$
+
+The revenue $f(x)$, in dollars, that a company receives from sales of a product is given by the function \textbackslash\{\}textit\{f\} above, where \textbackslash\{\}textit\{x\} is the unit price, in dollars, of the product. The graph of $y = f(x)$ in the \textbackslash\{\}textit\{xy\}-plane intersects the \textbackslash\{\}textit\{x\}-axis at 0 and \textbackslash\{\}textit\{a\}. What does \textbackslash\{\}textit\{a\} represent?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item The revenue, in dollars, when the unit price of the product is \$0
+  \item The unit price, in dollars, of the product that will result in maximum revenue
+  \item The unit price, in dollars, of the product that will result in a revenue of \$0
+  \item The maximum revenue, in dollars, that the company can make
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Function $f$ is defined by $f$. Function $g$ is defined by $g$. The graph of $y$ in the \textbackslash\{\}textit\{xy\}-plane has \textbackslash\{\}textit\{x\}-intercepts at $(a,0)$, $(b,0)$, and $(c,0)$, where $a$, $b$, and $c$ are distinct constants. What is the value of $a + b + c$?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $-$
+  \item $-$
+  \item $11$
+  \item $15$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The function $h$ is defined by $h(x)={a}^{x}+b$, where $a$ and $b$ are positive constants. The graph of $y=h(x)$ in the $x y$-plane passes through the points ($0$, $10$) and ($-2$, $\frac{325}{36}$). What is the value of $a b$?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $\frac{1}{4}$
+  \item $\frac{1}{2}$
+  \item $54$
+  \item $60$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Data set F consists of $55$ integers between $170$ and $290$. Data set G consists of all the integers in data set F as well as the integer $10$. Which of the following must be less for data set F than for data set G?
+
+• The mean
+
+• The median
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item I only
+  \item II only
+  \item I and II
+  \item Neither I nor II
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+The number of zebras in a population in $2018$ was $1.27$ times the number of zebras in this population in $2014$. If the number of zebras in this population in $2014$ is $p$ of the number of zebras in this population in $2018$, what is the value of $p$, to the nearest whole number?
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+To study fluctuations in composition, samples of pumice were taken from $29$ locations and cut in the shape of a cube. The length of the edge of one of these cubes is $3.000$ centimeters. This cube has a density of $0.230$ grams per cubic centimeter. What is the mass of this cube, in grams?
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+$R$
+
+$S$
+
+$T$
+
+The side lengths of right triangle $R$ are given. Triangle $R$ is similar to triangle $U$, where $S$ corresponds to $V$ and $T$ corresponds to $W$. What is the value of $\tan$?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $\frac{5}{13}$
+  \item $\frac{5}{12}$
+  \item $\frac{12}{13}$
+  \item $\frac{12}{5}$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+In the figure above, $line segment B D$ is parallel to $line segment A E$. What is the length of $line segment C E$ ?
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+Which system of linear equations has no solution?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $- 2 x + 3 y = -9$
+
+$2 x - 3 y = 9$
+  \item $2 x - 3 y = 9$
+
+$3 x + 4 y = 10$
+  \item $2 x - 3 y = 9$
+
+$- 6 x + 9 y = -27$
+  \item $- 2 x + 3 y = 9$
+
+$4 x - 6 y = 18$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+
+\stepcounter{questionnum}
+\vspace{6pt}\noindent
+\begin{minipage}{\columnwidth}\raggedright
+\noindent\begin{tikzpicture}[baseline=(num.base)]
+  \fill[qbarcolor] (0, -0.08) rectangle (\columnwidth, 0.40);
+  \node[fill=black, text=white, inner xsep=5pt, inner ysep=1.5pt,
+        font=\small, minimum height=0.48cm, anchor=west]
+        (num) at (0, 0.16) {\thequestionnum};
+\end{tikzpicture}\par\vspace{8pt}
+\begin{adjustwidth}{12pt}{0pt}
+
+
+\begin{center}
+\includegraphics[width=\linewidth]{figures/2e8027b0_stem_0.pdf}
+\end{center}
+
+
+
+The scatterplot shows the relationship between two variables, $x$ and $y$, for data set E. A line of best fit is shown. Data set F is created by multiplying the \textbackslash\{\}textit\{y\}-coordinate of each data point from data set E by $3.9$. Which of the following could be an equation of a line of best fit for data set F?
+\begin{enumerate}[label=\Alph*),leftmargin=18pt,topsep=3pt,itemsep=2pt]
+  \item $y$
+  \item $y$
+  \item $y$
+  \item $y$
+\end{enumerate}
+\end{adjustwidth}
+\end{minipage}\par
+\onecolumn
+\thispagestyle{plainpage}
+\vfill
+\begin{center}
+\rule{0.8\textwidth}{0.5pt}\\[6pt]
+{\large\textbf{STOP}}\\[4pt]
+{\small If you finish before time is called, you may check your work on this module only.\\
+Do not turn to any other module in the test.}
+\end{center}
+\end{document}
